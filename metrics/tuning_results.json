@@ -5,7 +5,7 @@
         "min_samples_split": 2,
         "n_estimators": 100
     },
-    "Ensemble_Best_CV_F1": 0.9056847791870183,
+    "Ensemble_Best_CV_F1": 0.9056847791870182,
     "NeuralNet_Best_Params": {
         "activation": "tanh",
         "alpha": 0.0001,

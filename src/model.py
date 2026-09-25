@@ -1,9 +1,18 @@
 import os
+import sys
 import json
 import joblib
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+
+# Safely handle PyTorch DLL load failures on Windows when SHAP imports
+try:
+    import torch
+except Exception:
+    sys.modules['torch'] = None
+
+import shap
 
 from sklearn.model_selection import train_test_split, StratifiedKFold, GridSearchCV
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
@@ -13,9 +22,6 @@ from sklearn.metrics import (
     f1_score, precision_score, recall_score, accuracy_score, roc_auc_score, classification_report
 )
 
-import shap
-
-import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from src.data_prep import clean_data, impute_missing_values

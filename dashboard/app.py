@@ -7,7 +7,14 @@ import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
 import seaborn as sns
+# Safely handle PyTorch DLL load failures on Windows when SHAP imports
+try:
+    import torch
+except Exception:
+    sys.modules['torch'] = None
+
 import shap
+
 
 # Ensure root directory is in sys.path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
