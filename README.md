@@ -1,10 +1,5 @@
 # Predictive Healthcare Insights & Cost-Effectiveness System
 
-[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
-[![Docker](https://img.shields.io/badge/docker-ready-brightgreen.svg)](https://www.docker.com/)
-[![Streamlit](https://img.shields.io/badge/streamlit-dashboard-red.svg)](https://streamlit.io/)
-[![Pytest](https://img.shields.io/badge/pytest-passing-success.svg)](https://docs.pytest.org/)
-
 An end-to-end predictive machine learning system and interactive financial analysis dashboard designed to forecast patient treatment outcomes (cardiovascular disease) and optimize hospital resource allocation. Built using Python, Scikit-learn, SHAP, Streamlit, and Docker.
 
 ---
