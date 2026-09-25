@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: predictive_healthcare_dashboard
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./metrics:/app/metrics
+      - ./reports:/app/reports
+    environment:
+      - DATA_PATH=data/raw/heart_disease.csv
+      - MODEL_SAVE_DIR=models/
+      - STREAMLIT_PORT=8501
+    restart: unless-stopped
